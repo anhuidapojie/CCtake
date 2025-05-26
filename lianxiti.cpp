@@ -643,15 +643,15 @@ int main(int argc,char const * argv[])
     }
     for (int i = 2; i<=n; ++i)
     {
+        int j =2;
         for (int j = 2; j * j<=i; ++j)
         {
             if (n % i == 0)
             {
-                
+                break;
             }
         }
     }
-    cout << endl;
     return 0;
 }
 //33.输入一个整数，统计它的位数（如 1234 → 4）
