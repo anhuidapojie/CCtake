@@ -282,6 +282,11 @@ int main(int argc, const char *argv[])
     int year = 0;
     cout << "请输入年份" << endl;
     cin >> year;
+    if ()
+    {
+        /* code */
+    }
+    
     if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0)
     {
         cout << "闰年" << endl;
@@ -487,6 +492,38 @@ int main(int argc,char const * argv[])
     }
     return 0;
 }
+
+
+#include <iostream>
+using namespace std;
+
+int main() {
+    int year, month, day;
+    cout << "请输入年,月,日：";
+    cin >> year >> month >> day;
+
+    int dayOfYear = 0;
+    for (int i = 1; i < month; i++) {
+        switch (i) {
+            case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+                dayOfYear += 31;
+                break;
+            case 4: case 6: case 9: case 11:
+                dayOfYear += 30;
+                break;
+            case 2:
+                if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                    dayOfYear += 29;
+                } else {
+                    dayOfYear += 28;
+                }
+                break;
+        }
+    }
+    cout << "该日期是当年的第 " << dayOfYear + day << " 天" << endl;
+    return 0;
+}
+
 // 27.输入年、月、日，判断该日期是否有效（是否存在）（考虑不同月份的天数和闰年情况）。
 // 跳过
 
@@ -517,6 +554,37 @@ int main(int argc,char const * argv[]) {
     cout << "成绩等级：" << grade << endl;
     return 0;
 }
+
+#include <iostream>
+using namespace std;
+
+int main(int argc, char const *argv[]) {
+    int n;
+    cout<<"请输入一个成绩: ";
+    cin>>n;
+    switch (n/10)
+    {
+        case '10':
+            cout<<"A";
+            break;
+        case '9':
+            cout<<"B";
+            break;
+        case '8':
+            cout<<"C";
+            break;
+        case '7':
+            cout<<"D";
+            break;
+        case '6':
+            cout<<"E";
+            break;
+        default:
+            cout<<"F";
+            break;
+    }
+    return 0;
+}
 // 30.打印 9x9 乘法表
 #include <iostream>
 using namespace std;
@@ -545,7 +613,7 @@ int main(int argc,char const * argv[])
     int n;
     cout<< "请输入一个素数：";
     cin >> n;
-    if (1>=n)
+    if (1<=n)
     {
         cout << "不是素数";
         return 0;
