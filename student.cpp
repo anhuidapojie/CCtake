@@ -40,33 +40,38 @@ void change_score(int arr[],int n)
 
 void show_max_score(int arr[],int capcity)
 {
+    int temp = 0;
     for (int i = capcity-1; i >= 0; i--)
     {
+        
         if (arr[i]>arr[i+1])
         {
-            cout<<arr[i]<<endl;
+            temp = arr[i];
         }
         else
         {
-            cout<<arr[i+1]<<endl;
+            temp = arr[i+1];
         }
     }
+    cout<<temp<<endl;
 }
 
 void show_min_score(int arr[],int capcity)
 {
+    int temp = 0;
     for (int i = 0; i < capcity-1; i++)
     {
+        
         if (arr[i]>arr[i+1])
         {
-            cout<<arr[i+1];
+            temp = arr[i+1];
         }
         else
         {
-            cout<<arr[i];
+            temp = arr[i+1];
         }
-        
     }
+    cout<<temp<<endl;
     
 }
 
