@@ -47,13 +47,14 @@ void show_max_score(int arr[],int capcity)
         if (arr[i]>arr[i+1])
         {
             temp = arr[i];
+            cout<<temp<<endl;
         }
         else
         {
             temp = arr[i+1];
         }
     }
-    cout<<temp<<endl;
+    
 }
 
 void show_min_score(int arr[],int capcity)
