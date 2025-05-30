@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 using namespace std;
 int main(int argc,char const * argv[])
 {
@@ -13,7 +14,7 @@ int main(int argc,char const * argv[])
     {
         for (int j = 0; j < 3; j++)
         {
-            cout<<arr[i][j]<<" ";
+            cout<<left<<setw(3)<<arr[i][j];
         }
         cout<<endl;
     }
