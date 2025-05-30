@@ -13,8 +13,9 @@ int main(int argc,char const * argv[])
     {
         for (int j = 0; j < 3; j++)
         {
-            cout<<arr[i][j]<<" "<<endl;
+            cout<<arr[i][j]<<" ";
         }
+        cout<<endl;
     }
     return 0;
 }
