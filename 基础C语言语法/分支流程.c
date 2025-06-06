@@ -23,6 +23,6 @@ int main()
         x = 'N';
     }
     char x,c;
-    c = x >= 10?'Y':'N';
+    c = x >= 10 ?'Y':'N';
     return 0;
 }
